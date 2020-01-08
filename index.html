@@ -3,6 +3,11 @@
 <head>  
 <title>First task for react training</title>
 <script language="JavaScript" type="text/javascript" src="app.js"></script>
+<style>
+    p {
+    color:red;}
+</style>
+    
 </head>  
 <body>  
 <h1>Basic form</h1>  
@@ -11,28 +16,39 @@
      <legend>First task:</legend>
      <table>
         <tr>
-            <td>First name:</td>
-            
+            <td>First name:</td>            
             <td><input type="text" id="Fname" placeholder="veuillez entrer votre prénom"  ></td>
+            <td><p id="fnameAlert"></p></td>
+        </tr>
         <tr>
             <td>Last name:</td>
-            <td> <input type="text"  id="Lname" placeholder="veuillez entrer votre nom"  ><td>
+            <td><input type="text"  id="Lname" placeholder="veuillez entrer votre nom"  ><td>
+            <td><p id="lnameAlert"></p></td>
+        </tr>
         <tr>
             <td>Email:</td>
             <td><input type="text" id="mail" placeholder="veuillez entrer votre e-mail"  onblur="verifMail(this);" ></td>
+            <td><p id="mailAlert"></p></td>
+        </tr>
         <tr>
             <td>Bio:</td>
-            <td><textarea rows="3" cols="22" placeholder="Votre biographie SVP." id="bio" ></textarea></td>
+            <td><textarea rows="3" cols="22" placeholder="Votre biographie SVP" id="bio" ></textarea></td>
+            <td><p id="bioAlert"></p></td>
+        </tr>
         <tr>            
             <td>Tel Number:</td>
-            <td> <input type="tel" id="tel" onblur="verifNum(this);" ><td>
+            <td> <input type="text" id="tel" onblur="verifNum(this);" >
+            <td><p id="telAlert"></p></td>
+        </tr>
         <tr>
             <td>Address:</td>
-        <td><input type="text" id="adress" ></td>
-        </br>
+            <td><input type="text" id="adress" ></td>
+            <td><p id="adressAlert"></p></td>
+        </tr>
         <tr>
             <td></td>
-            <td><input type="submit" value="Valider" id="validate"></td></tr>
+            <td><input type="submit" value="Valider" id="validate"></td>
+        </tr>
      </table>
     </fieldset>
    </form>

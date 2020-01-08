@@ -18,42 +18,51 @@ function verifNum()
    var pattern = /^\(\d{2}\)\s*\d{3}(?:-|\s*)\d{3}$/;
    if(!pattern.test(tele.value))
    {
-      alert("veuillez entrer la bonne format de votre mobile");
-      }
+      alert ("veuillez entrer la bonne format de votre mobile");
+      return false;  
+   }
    else
    {
+      document.getElementById("telAlert").innerHTML = "It's Ok";
       return true;
    }
 }
 function verifForm()
 {
    if (document.getElementById('Fname').value == ""){
-      alert ("veuillez saisir votre nom");
+      document.getElementById("fnameAlert").innerHTML = "veuillez saisir votre prénom";
       return false;
-   }   
+   } 
+   if (document.getElementById('Fname').value !== ""){
+      document.getElementById("fnameAlert").innerHTML = '';
+  } 
   if (document.getElementById('Lname').value == ""){
-   alert ("veuillez saisir votre nom");
+   document.getElementById("lnameAlert").innerHTML ="veuillez saisir votre nom";
       return false;
   }
    if( document.getElementById('mail').value == ""){
-   alert ("veuillez saisir votre email");
+      document.getElementById("mailAlert").innerHTML ="veuillez saisir votre email";
       return false;
-   }
+   } 
    if( document.getElementById('bio').value == ""){
-      alert ("veuillez saisir votre Biographie");
+      document.getElementById("bioAlert").innerHTML ="veuillez saisir votre Biographie";
       return false;
    }
    if(document.getElementById('tel').value == ""){
-      alert ("veuillez saisir votre numero de telephone");
+      document.getElementById("telAlert").innerHTML ="veuillez saisir votre numero de telephone";
       return false;
-   }
+   } 
    if( document.getElementById('adress').value == ""){
-      alert ("veuillez saisir votre adresse");
+      document.getElementById("adressAlert").innerHTML ="veuillez saisir votre adresse";
       return false;
    }
-   
+   if(verifMail()==false && verifNum()==false){
+      return false;
+   }
+     
    else{
       alert("vos données sont bien envoyé");
+      return true;
    }
      
 }
