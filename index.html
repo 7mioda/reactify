@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>  
+<head>  
+<title>First task for react training</title>
+<script language="JavaScript" type="text/javascript" src="app.js"></script>
+</head>  
+<body>  
+<h1>Basic form</h1>  
+<form action="#" method="post" onsubmit="return verifForm(this);">
+    <fieldset>
+     <legend>First task:</legend>
+     <table>
+        <tr>
+            <td>First name:</td>
+            
+            <td><input type="text" id="Fname" placeholder="veuillez entrer votre prénom"  ></td>
+        <tr>
+            <td>Last name:</td>
+            <td> <input type="text"  id="Lname" placeholder="veuillez entrer votre nom"  ><td>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" id="mail" placeholder="veuillez entrer votre e-mail"  onblur="verifMail(this);" ></td>
+        <tr>
+            <td>Bio:</td>
+            <td><textarea rows="3" cols="22" placeholder="Votre biographie SVP." id="bio" ></textarea></td>
+        <tr>            
+            <td>Tel Number:</td>
+            <td> <input type="tel" id="tel" onblur="verifNum(this);" ><td>
+        <tr>
+            <td>Address:</td>
+        <td><input type="text" id="adress" ></td>
+        </br>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Valider" id="validate"></td></tr>
+     </table>
+    </fieldset>
+   </form>
+    
+</body>  
+</html> 
