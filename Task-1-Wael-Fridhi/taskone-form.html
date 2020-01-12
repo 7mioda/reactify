@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="taskone-form.css">
+    <title>Task one Form</title>
+</head>
+<body>
+<form action="reset">
+    <h1>Task one</h1>
+
+    <fieldset>
+        <legend>Personal informations</legend>
+        <div id="personalinformations">
+            <label><input required type="text" placeholder="First name"></label>
+            <label><input required type="text" placeholder="Last name"></label>
+            <label><input required type="email" placeholder="email"></label><br><br>
+            <label><input required type="text" pattern="[0-9]{8}" placeholder="phone number"></label><br><br>
+        </div>
+        <label>
+            <textarea required placeholder="Adress"></textarea>
+        </label>
+        <label>
+        <textarea required placeholder="Bio" rows="10"></textarea>
+        </label>
+        <button type="submit">confirm</button>
+        <button type="reset">cancel</button>
+    </fieldset>
+</form>
+</body>
+</html>
